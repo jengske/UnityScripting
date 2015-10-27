@@ -18,5 +18,7 @@ private int totalDestroyed;
     Destroy(otherId.gameObject);
     // counter to register the destroyed objects
     totalDestroyed = totalDestroyed + 1;
+    // print a Debug.log to the console
+    Debug.Log("TotalDestroyed", totalDestroyed);
   }
 }
