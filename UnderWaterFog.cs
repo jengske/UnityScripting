@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-//This script enables the underwater fog effect. Attach the script to the main camera.
+//This script enables underwater fog effect. Attach the script to the main camera and set the fog color.
 
 public class UnderWaterFog : MonoBehavior
 {
