@@ -34,10 +34,10 @@ public class UnderWaterFog : MonoBehavior
       saveSkyboxMaterial = RenderSettings.skybox;
       // Cache the water surface level
       underwaterLevel = water.position.y;
-      if (terrain == null) 
-      {
-        terrain = null;
-      }
+          if (terrain == null) 
+          {
+            terrain = null;
+          }
       
     }
     
@@ -47,20 +47,33 @@ public class UnderWaterFog : MonoBehavior
         // check if the camera is under water
         if (transform.position.y < underwaterLevel)
         {
-            // enable the fog
-            RenderSettings.fog = true;
-            // set fog color
-            RenderSettings.fogColor = fogColor;
-            // set fog density
-            RenderSettings.maxFogDensity = maxFogDensity;
-            // turn the skybox off
-            RenderSettings.skybox = null;
-            // We are under water
-            isUnderWater = true;
+            if(false == isUnderWater)
+            {
+                // enable the fog
+                RenderSettings.fog = true;
+                // set fog color
+                RenderSettings.fogColor = fogColor;
+                // set fog density
+                RenderSettings.maxFogDensity = maxFogDensity;
+                // turn the skybox off
+                RenderSettings.skybox = null;
+                // We are under water
+                isUnderWater = true;
+            }
         }
         // the main camera is not underwater
         else
         {
-          
+          if(true == isUnderWater)
+            {
+                // restore fog settings
+                RenderSettings.fog = saveFogEnabledFlag;
+                RenderSettings.fogColor = saveFogColor;
+                RenderSettings.fogDensity = saveFogDensity;
+                RenderSettings.skybox = saveSkyboxMaterial;
+                
+                // set bool camera is not under water
+                isUnderWater = false;
+            }
         }
 }
