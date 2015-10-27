@@ -1,4 +1,4 @@
-//
+// Author: Dirk Peeters
 using UnityEngine;
 using System.Collections;
 
