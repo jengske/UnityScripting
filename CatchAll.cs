@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 // This script destroys all objects in range, used for scenes were objects could fall true the ground
-// Create a emptyGameObject, add a boxCollider, attach the script.
+// Create a emptyGameObject, add a boxCollider, set it to trigger, attach the script.
 
 public class CatchAll : MonoBehaviour
 {
