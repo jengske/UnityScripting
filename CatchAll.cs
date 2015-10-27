@@ -4,7 +4,7 @@ using System.Collections;
 // This script destroys all objects in range, used for scenes were objects could fall true the ground
 // Create a emptyGameObject, add a boxCollider, attach the script.
 
-public class CatchAll : MonoBehavior
+public class CatchAll : MonoBehaviour
 {
 private int totalDestroyed;
 
