@@ -33,7 +33,7 @@ public class UnderWaterFog : MonoBehaviour
       saveFogDensity = RenderSettings.fogDensity;
       saveSkyboxMaterial = RenderSettings.skybox;
       // Cache the water surface level
-      underwaterLevel = water.position.y;
+		underwaterLevel = waterplane.position.y;
           if (terrain == null) 
           {
             terrain = null;
