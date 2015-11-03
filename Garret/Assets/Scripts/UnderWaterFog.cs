@@ -26,6 +26,7 @@ public class UnderWaterFog : MonoBehaviour
     void Start() 
     {
       // Set camera background color
+	
       camera.backgroundColor = fogColor;
       // Save the scene default fog settings
       saveFogEnabledFlag = RenderSettings.fog;
