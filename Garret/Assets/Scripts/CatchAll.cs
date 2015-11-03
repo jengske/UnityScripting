@@ -23,7 +23,7 @@ private bool isDebug = false;
     // print a Debug.log to the console
       if(true == isDebug)
       {
-        Debug.Log("TotalDestroyed", totalDestroyed);
+        //Debug.Log("TotalDestroyed", totalDestroyed);
       }
   }
 }
